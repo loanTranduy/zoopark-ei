@@ -76,19 +76,23 @@
                     <h3 class="orange-text">Horaires</h3>
                     <h4>Jours d'ouverture et heures d'ouverture</h4>
                     <ul class="tabs">
-                        <li class="tab col s3"><a href="#spring">Printemps</a> 3 mars au 20 juin</li>
-                        <li class="tab col s3"><a class="active" href="#summer">Été</a> 21 juin au 15 septembre</li>
-                        <li class="tab col s3"><a href="#winter">Hiver</a> 16 septembre au 4 janvier</li>
+                        <?php if(get_field('saison-1')): ?><li class="tab col s3"><a href="#spring"><?php the_field('saison-1'); ?></a></li><?php endif;?>
+                        <?php if(get_field('saison_2')): ?><li class="tab col s3"><a class="active" href="#summer"><?php the_field('saison_2'); ?></a></li><?php endif;?>
+                        <?php if(get_field('saison_3')): ?><li class="tab col s3"><a href="#winter"><?php the_field('saison_3'); ?></a></li><?php endif;?>
+                        <?php if(get_field('saison_4')): ?><li class="tab col s3"><a href="#new"><?php the_field('saison_4'); ?></a></li><?php endif;?>
                     </ul>
                 </div>
                 <div id="spring" class="col s12">
-                    <p><?php the_field('saison-printemps'); ?></p>
+                    <?php if(get_field('contenu_1')): ?><p><?php the_field('contenu_1'); ?></p><?php endif;?>
                 </div>
                 <div id="summer" class="col s12">
-                    <p><?php the_field('saison-ete'); ?></p>
+                    <?php if(get_field('contenu_2')): ?><p><?php the_field('contenu_2'); ?></p><?php endif;?>
                 </div>
                 <div id="winter" class="col s12">
-                    <p><?php the_field('saison-hiver'); ?></p>
+                    <?php if(get_field('contenu_3')): ?><p><?php the_field('contenu_3'); ?></p><?php endif;?>
+                </div>
+                <div id="new" class="col s12">
+                    <?php if(get_field('contenu_4')): ?><p><?php the_field('contenu_4'); ?></p><?php endif;?>
                 </div>
             </div>
         </div>
