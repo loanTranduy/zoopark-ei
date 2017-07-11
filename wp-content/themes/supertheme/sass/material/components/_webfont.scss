@@ -1,0 +1,120 @@
+
+/**
+ * @license - MyFonts Webfont Build ID 3047983, 2015-06-24T03:59:23-0400
+ * The fonts listed in this notice are subject to the End User License - Agreement(s) entered into by the website owner. All other parties are -explicitly restricted from using the Licensed Webfonts(s).
+ * You may obtain a valid license at the URLs below.
+ * Webfont: Canaro-Book by Rene Bieder
+ * URL: http://www.myfonts.com/fonts/rene-bieder/canaro/book/
+ * Webfont: Canaro-Bold by Rene Bieder
+ * URL: http://www.myfonts.com/fonts/rene-bieder/canaro/bold/
+ * Webfont: Canaro-ExtraBold by Rene Bieder
+ * URL: http://www.myfonts.com/fonts/rene-bieder/canaro/extra-bold/
+ * Webfont: Canaro-ExtraLight by Rene Bieder
+ * URL: http://www.myfonts.com/fonts/rene-bieder/canaro/extra-light/
+ * Webfont: Canaro-Medium by Rene Bieder
+ * URL: http://www.myfonts.com/fonts/rene-bieder/canaro/medium/
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=3047983
+ * Licensed pageviews: 10,000
+ * Webfonts copyright: Copyright &#x00A9; 2013 by Ren&#x00E9; Bieder. All rights reserved.
+ * © 2015 MyFonts Inc
+*/
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/2e822f");
+@font-face {font-family: 'Canaro';
+             src: url('#{$canaro-font-path}2E822F_8_0.eot');
+             src: url('#{$canaro-font-path}2E822F_8_0.eot?#iefix') format('embedded-opentype'),
+                  url('#{$canaro-font-path}2E822F_8_0.woff2') format('woff2'),
+                  url('#{$canaro-font-path}2E822F_8_0.woff') format('woff'),
+                  url('#{$canaro-font-path}2E822F_8_0.ttf') format('truetype');
+             font-weight: 200;
+}
+@font-face {font-family: 'Canaro';
+             src: url('#{$canaro-font-path}2E822F_0_0.eot');
+             src: url('#{$canaro-font-path}2E822F_0_0.eot?#iefix') format('embedded-opentype'),
+                  url('#{$canaro-font-path}2E822F_0_0.woff2') format('woff2'),
+                  url('#{$canaro-font-path}2E822F_0_0.woff') format('woff'),
+                  url('#{$canaro-font-path}2E822F_0_0.ttf') format('truetype');
+             font-weight: 300;
+}
+@font-face {font-family: 'Canaro';
+             src: url('#{$canaro-font-path}2E822F_D_0.eot');
+             src: url('#{$canaro-font-path}2E822F_D_0.eot?#iefix') format('embedded-opentype'),
+                  url('#{$canaro-font-path}2E822F_D_0.woff2') format('woff2'),
+                  url('#{$canaro-font-path}2E822F_D_0.woff') format('woff'),
+                  url('#{$canaro-font-path}2E822F_D_0.ttf') format('truetype');
+             font-weight: 400;
+}
+@font-face {
+             font-family: 'Canaro';
+             src: url('#{$canaro-font-path}2E822F_5_0.eot');
+             src: url('#{$canaro-font-path}2E822F_5_0.eot?#iefix') format('embedded-opentype'),
+                  url('#{$canaro-font-path}2E822F_5_0.woff2') format('woff2'),
+                  url('#{$canaro-font-path}2E822F_5_0.woff') format('woff'),
+                  url('#{$canaro-font-path}2E822F_5_0.ttf') format('truetype');
+             font-weight: 500;
+}
+@font-face {
+             font-family: 'Canaro';
+             src: url('#{$canaro-font-path}2E822F_7_0.eot');
+             src: url('#{$canaro-font-path}2E822F_7_0.eot?#iefix') format('embedded-opentype'),
+                  url('#{$canaro-font-path}2E822F_7_0.woff2') format('woff2'),
+                  url('#{$canaro-font-path}2E822F_7_0.woff') format('woff'),
+                  url('#{$canaro-font-path}2E822F_7_0.ttf') format('truetype');
+             font-weight: 700;
+}
+
+
+@font-face {
+             font-family: "Roboto";
+             src: local(Roboto Thin), url('#{$roboto-font-path}Roboto-Thin.eot');
+             src: url("#{$roboto-font-path}Roboto-Thin.eot?#iefix") format('embedded-opentype'),
+                 url("#{$roboto-font-path}Roboto-Thin.woff2") format("woff2"),
+                 url("#{$roboto-font-path}Roboto-Thin.woff") format("woff"),
+                 url("#{$roboto-font-path}Roboto-Thin.ttf") format("truetype");
+
+             font-weight: 200;
+}
+@font-face {
+             font-family: "Roboto";
+             src: local(Roboto Light), url('#{$roboto-font-path}Roboto-Light.eot');
+             src: url("#{$roboto-font-path}Roboto-Light.eot?#iefix") format('embedded-opentype'),
+                 url("#{$roboto-font-path}Roboto-Light.woff2") format("woff2"),
+                 url("#{$roboto-font-path}Roboto-Light.woff") format("woff"),
+                 url("#{$roboto-font-path}Roboto-Light.ttf") format("truetype");
+             font-weight: 300;
+}
+
+@font-face {
+             font-family: "Roboto";
+             src: local(Roboto Regular), url('#{$roboto-font-path}Roboto-Regular.eot');
+             src: url("#{$roboto-font-path}Roboto-Regular.eot?#iefix") format('embedded-opentype'),
+                 url("#{$roboto-font-path}Roboto-Regular.woff2") format("woff2"),
+                 url("#{$roboto-font-path}Roboto-Regular.woff") format("woff"),
+                 url("#{$roboto-font-path}Roboto-Regular.ttf") format("truetype");
+             font-weight: 400;
+}
+
+@font-face {
+             font-family: "Roboto";
+             src: url('#{$roboto-font-path}Roboto-Medium.eot');
+             src: url("#{$roboto-font-path}Roboto-Medium.eot?#iefix") format('embedded-opentype'),
+                 url("#{$roboto-font-path}Roboto-Medium.woff2") format("woff2"),
+                 url("#{$roboto-font-path}Roboto-Medium.woff") format("woff"),
+                 url("#{$roboto-font-path}Roboto-Medium.ttf") format("truetype");
+             font-weight: 500;
+}
+
+@font-face {
+             font-family: "Roboto";
+             src: url('#{$roboto-font-path}Roboto-Bold.eot');
+             src: url("#{$roboto-font-path}Roboto-Bold.eot?#iefix") format('embedded-opentype'),
+                 url("#{$roboto-font-path}Roboto-Bold.woff2") format("woff2"),
+                 url("#{$roboto-font-path}Roboto-Bold.woff") format("woff"),
+                 url("#{$roboto-font-path}Roboto-Bold.ttf") format("truetype");
+             font-weight: 700;
+}
+
+
+
+

@@ -1,0 +1,113 @@
+    /*
+    Flaticon icon font: Flaticon
+    Creation date: 30/06/2016 16:17
+    */
+
+    @font-face {
+  font-family: "Flaticon";
+  src: url("./Flaticon.eot");
+  src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon.woff") format("woff"),
+       url("./Flaticon.ttf") format("truetype"),
+       url("./Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+    .fi:before{
+        display: inline-block;
+  font-family: "Flaticon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+    }
+
+    .flaticon-animal:before { content: "\f100"; }
+.flaticon-animal-1:before { content: "\f101"; }
+.flaticon-animal-2:before { content: "\f102"; }
+.flaticon-animal-3:before { content: "\f103"; }
+.flaticon-animal-4:before { content: "\f104"; }
+.flaticon-animal-5:before { content: "\f105"; }
+.flaticon-animal-6:before { content: "\f106"; }
+.flaticon-animals:before { content: "\f107"; }
+.flaticon-animals-1:before { content: "\f108"; }
+.flaticon-animals-10:before { content: "\f109"; }
+.flaticon-animals-11:before { content: "\f10a"; }
+.flaticon-animals-12:before { content: "\f10b"; }
+.flaticon-animals-13:before { content: "\f10c"; }
+.flaticon-animals-14:before { content: "\f10d"; }
+.flaticon-animals-15:before { content: "\f10e"; }
+.flaticon-animals-16:before { content: "\f10f"; }
+.flaticon-animals-17:before { content: "\f110"; }
+.flaticon-animals-18:before { content: "\f111"; }
+.flaticon-animals-19:before { content: "\f112"; }
+.flaticon-animals-2:before { content: "\f113"; }
+.flaticon-animals-20:before { content: "\f114"; }
+.flaticon-animals-21:before { content: "\f115"; }
+.flaticon-animals-22:before { content: "\f116"; }
+.flaticon-animals-23:before { content: "\f117"; }
+.flaticon-animals-24:before { content: "\f118"; }
+.flaticon-animals-25:before { content: "\f119"; }
+.flaticon-animals-26:before { content: "\f11a"; }
+.flaticon-animals-27:before { content: "\f11b"; }
+.flaticon-animals-28:before { content: "\f11c"; }
+.flaticon-animals-29:before { content: "\f11d"; }
+.flaticon-animals-3:before { content: "\f11e"; }
+.flaticon-animals-4:before { content: "\f11f"; }
+.flaticon-animals-5:before { content: "\f120"; }
+.flaticon-animals-6:before { content: "\f121"; }
+.flaticon-animals-7:before { content: "\f122"; }
+.flaticon-animals-8:before { content: "\f123"; }
+.flaticon-animals-9:before { content: "\f124"; }
+    
+    $font-Flaticon-animal: "\f100";
+    $font-Flaticon-animal-1: "\f101";
+    $font-Flaticon-animal-2: "\f102";
+    $font-Flaticon-animal-3: "\f103";
+    $font-Flaticon-animal-4: "\f104";
+    $font-Flaticon-animal-5: "\f105";
+    $font-Flaticon-animal-6: "\f106";
+    $font-Flaticon-animals: "\f107";
+    $font-Flaticon-animals-1: "\f108";
+    $font-Flaticon-animals-10: "\f109";
+    $font-Flaticon-animals-11: "\f10a";
+    $font-Flaticon-animals-12: "\f10b";
+    $font-Flaticon-animals-13: "\f10c";
+    $font-Flaticon-animals-14: "\f10d";
+    $font-Flaticon-animals-15: "\f10e";
+    $font-Flaticon-animals-16: "\f10f";
+    $font-Flaticon-animals-17: "\f110";
+    $font-Flaticon-animals-18: "\f111";
+    $font-Flaticon-animals-19: "\f112";
+    $font-Flaticon-animals-2: "\f113";
+    $font-Flaticon-animals-20: "\f114";
+    $font-Flaticon-animals-21: "\f115";
+    $font-Flaticon-animals-22: "\f116";
+    $font-Flaticon-animals-23: "\f117";
+    $font-Flaticon-animals-24: "\f118";
+    $font-Flaticon-animals-25: "\f119";
+    $font-Flaticon-animals-26: "\f11a";
+    $font-Flaticon-animals-27: "\f11b";
+    $font-Flaticon-animals-28: "\f11c";
+    $font-Flaticon-animals-29: "\f11d";
+    $font-Flaticon-animals-3: "\f11e";
+    $font-Flaticon-animals-4: "\f11f";
+    $font-Flaticon-animals-5: "\f120";
+    $font-Flaticon-animals-6: "\f121";
+    $font-Flaticon-animals-7: "\f122";
+    $font-Flaticon-animals-8: "\f123";
+    $font-Flaticon-animals-9: "\f124";

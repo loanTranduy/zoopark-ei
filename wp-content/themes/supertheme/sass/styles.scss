@@ -1,0 +1,222 @@
+@import "material/materialize";
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'canaro', sans-serif;
+}
+
+// Yours
+$fsizeH:3rem;
+$fsizeP:1rem;
+// NAV-BAR MODIF
+@media #{$medium-only} {
+  .nav-princip .container,
+  .search-bar {
+    width: 90%;
+  }
+}
+
+
+/* Custom Stylesheet */
+
+
+/* Use your own styles to override Materialize */
+
+.nav-princip {
+  @media #{$medium-only} {
+    background: red;
+    line-height: 90px;
+    height: 90px;
+  }
+  .material-icons {
+    position: relative;
+    top: 8px;
+  }
+  li {
+    position: relative;
+  }
+  span {
+    font-size: 10px;
+    position: absolute;
+    line-height: 10px;
+    width: 100px;
+    margin-left: -50px;
+    top: 45px;
+    left: 50%;
+    display: block;
+    text-align: center;
+    color: orange;
+  }
+}
+
+.button-collapse i {
+  margin-left: 8px;
+  @media #{$medium-only} {
+    margin-top: 14px;
+  }
+}
+
+.brand-logo {
+  background: url('../img/ZOOPARK-01.svg') center no-repeat;
+  @media #{$medium-only} {
+    background: url('../img/ZOOPARK-02.svg') center no-repeat;
+    height: 100%;
+  }
+  @media #{$large-and-up} {
+    background: url('../img/ZOOPARK-03.svg') left no-repeat;
+  }
+  width: 100%;
+  line-height: 60px;
+  h1.brand {
+    font-size: 0;
+  }
+}
+
+.icon-block {
+  em {
+    color: orange;
+  }
+}
+
+[class^="flaticon-"]:before,
+[class*=" flaticon-"]:before,
+[class^="flaticon-"]:after,
+[class*=" flaticon-"]:after {
+  font-family: "Flaticon";
+  font-size: 50px;
+  text-indent: -10px;
+  font-style: normal;
+  margin-left: 20px;
+  color: #333;
+}
+
+.slogan {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 300px;
+  h2 {
+    margin-top: 2em;
+    font-size: $fsizeH/1.5;
+    display: block;
+    text-shadow: 0 0 10px #444, 0 0 30px #444;
+  }
+}
+
+.call-btn {
+  margin: 1em 1em 0;
+  @media #{$large-and-up} {
+    margin: 0 1em;
+  }
+  height: auto;
+  padding: 1rem;
+  width: 12rem;
+  line-height: 1.2;
+  font-size: $fsizeH/4;
+  strong {
+    font-size: $fsizeH/2;
+    display: block;
+    font-weight: 600;
+  }
+  span {
+    font-size: $fsizeH/1.8;
+    line-height: .9;
+    display: block;
+    color: orange;
+  }
+   p {
+    line-height: 1;
+  }
+}
+
+.opening {
+  h3 {
+    font-size: $fsizeH/2.2;
+    font-weight: 500;
+    margin: 1.5em 0 0;
+  }
+  h4 {
+    font-size: $fsizeH/1.5;
+    font-weight: 200;
+    margin: 0 0 1em;
+  }
+}
+
+.page-footer {
+  h3 {
+    font-size: $fsizeH/2.2;
+    font-weight: 400;
+  }
+  .footer-links {
+    a {
+      font-size: $fsizeH/3.5;
+      color: white;
+      &:active,
+      &:hover {
+        color: orange;
+      }
+    }
+  }
+  .gmap {
+    margin-top: 3em;
+    background: white;
+    height: 15em;
+  }
+  .access-map {
+    p {
+      margin: 0;
+      line-height: 1;
+      span {
+        display: block;
+      }
+    }
+    h3 {
+      display: none;
+    }
+    h4 {
+      font-size: 1rem;
+      line-height: .1;
+      em {
+        display: block;
+      }
+    }
+  }
+  .version {
+    a {
+      color:#999;
+      &:hover {
+        color: white;
+      }
+    }
+  }
+}
+
+//page forms
+.ask {
+  background: #444;
+  margin-bottom: 2rem;
+  h3 {
+    font-size: $fsizeH/2;
+  }
+}
+
+.header-forms {
+  margin: 1em 0;
+}
+
+.company {
+  background: transparent url('../content/images/background_form.jpg') center no-repeat;
+  background-position: cover;
+  h3,
+  p {
+    text-shadow: 0 0 10px #044, 0 0 30px #044;
+  }
+}
+
+//page mapzoo
+.mini-map {
+  img {
+    width:100%;
+  }
+}

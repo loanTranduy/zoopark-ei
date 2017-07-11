@@ -1,4 +1,6 @@
-    <div id="index-banner" class="parallax-container">
+<?php get_header(); ?>
+<!-- INDEX -->
+<div id="index-banner" class="parallax-container">
         <div class="section no-pad-bot">
             <div class="slogan container">
                 <div class="row center">
@@ -56,7 +58,7 @@
         </div>
         <div class="parallax"><img src="content/images/background2.jpg" alt="Unsplashed background img 2"></div>
     </div>
-    <div class="opening container">
+    <div class="opening container" id="horaire">
         <div class="section">
             <div class="row">
                 <div class="col s12 center">
@@ -89,3 +91,4 @@
         </div>
         <div class="parallax"><img src="content/images/background3.jpg" alt="Unsplashed background img 3"></div>
     </div>
+<?php  get_footer(); ?>
