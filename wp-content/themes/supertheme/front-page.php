@@ -41,6 +41,7 @@
             </div>
         </div>
     </div>
+    
     <div class="call orange lighten-1">
         <div class="container">
             <div class="section">
@@ -81,13 +82,13 @@
                     </ul>
                 </div>
                 <div id="spring" class="col s12">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed unde, natus excepturi autem quae dolore repellat voluptas ipsa esse perferendis, incidunt eius nulla rem accusantium, voluptatem, impedit amet non doloribus.</p>
+                    <p><?php the_field('saison-printemps'); ?></p>
                 </div>
                 <div id="summer" class="col s12">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat autem maiores vero laudantium maxime, optio, voluptatibus, fuga aperiam laboriosam molestiae cumque dignissimos ipsa aut possimus, consequuntur totam temporibus. Maiores, adipisci, et?</p>
+                    <p><?php the_field('saison-ete'); ?></p>
                 </div>
                 <div id="winter" class="col s12">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde iste nesciunt, minima corporis dolore itaque porro molestiae! Numquam.</p>
+                    <p><?php the_field('saison-hiver'); ?></p>
                 </div>
             </div>
         </div>
