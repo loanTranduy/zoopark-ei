@@ -19,27 +19,25 @@
     <div class="container">
         <div class="section">
             <div class="row">
-                <div class="col s12 m4">
-                    <div class="icon-block">
-                        <h2 class="center brown-text"><i class="fi flaticon-animals">Ours</i></h2>
-                        <h3 class="center">L'Ours noir<em>- Amérique du Nord</em></h3>
-                        <p class="light">Le continent nord-américain abrite une faune et une zone boisée incroyable</p>
-                    </div>
-                </div>
-                <div class="col s12 m4">
-                    <div class="icon-block">
-                        <h2 class="center brown-text"><i class="fi flaticon-animal-1">Quetzal</i></h2>
-                        <h3 class="center">Splendides Quetzals <em>-Amérique du Sud</em></h3>
-                        <p class="light">Visitez notre immense volière exotique d'oiseaux et de plantes d'Amérique du sud</p>
-                    </div>
-                </div>
-                <div class="col s12 m4">
-                    <div class="icon-block">
-                        <h2 class="center brown-text"><i class="fi flaticon-animal-3">Girafons</i></h2>
-                        <h3 class="center">Jeunes Girafons <em>- Savane africaine</em></h3>
-                        <p class="light">Découvrez la richesse de la plaine Africaine et la beauté de ses habitants</p>
-                    </div>
-                </div>
+                    <?php
+                        $args = array(
+                            'post_type' =>  'animaux',
+                            'post_status'   =>  'publish',
+                            'posts_per_page' =>  3
+                           );
+                    $requete = new WP_Query($args);
+                    if($requete->have_posts()):?>
+                    <?php while($requete->have_posts()): $requete->the_post(); ?>
+                    <!--La boucle des animaux-->
+                        <div class="col s12 m4">
+                            <div class="icon-block">
+                                    <?php if(get_field('animal-icon')): ?><h2 class="center brown-text"><i class="<?php the_field('animal-icon'); ?>"></i></h2><?php endif; ?>
+                                    <h3 class="center"><?php the_title(); ?><em><?php the_field('origine'); ?></em></h3>
+                                    <?php if(get_field('excerpt')): ?><p class="light"><?php the_field('excerpt'); ?></p><?php endif; ?>
+                            </div>
+                        </div>
+                    <?php endwhile; ?>
+                <?php endif; wp_reset_postdata(); ?>
             </div>
         </div>
     </div>
