@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+
 <!-- SINGLE_ANIMAUX -->
     <main>
 <div class="parallax-container valign-wrapper">
@@ -17,14 +18,12 @@
             <div class="row">
                 <?php  if(have_posts()): the_post();?>
                 <h2><?php the_title(); ?></h2>
-                <!--<div class="animal-image">
-                <img class="hoverZoomLink" src="<?php the_field('image_principale'); ?>" alt="">
-                </div>-->
-                <?php the_content(); ?>
+                <p><?php the_content(); ?></p>
                 
                 <?php endif; ?>
             </div>
         </div>
+
     </main>
 <?php  get_footer(); ?>
 
