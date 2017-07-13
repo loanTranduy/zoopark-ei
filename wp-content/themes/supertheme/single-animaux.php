@@ -10,13 +10,16 @@
             </div>
             </div>
         </div>
+        <div class="container">
         <div class="col s12 m4">
             <div class="row">
                 <?php  if(have_posts()): the_post();?>
                 <h2><?php the_title(); ?></h2>
-                <p><?php the_content(); ?></p>
+                <?php the_content(); ?>
+                <img class="hoverZoomLink" src="<?php the_field('image_couverture'); ?>" alt="">
                 <?php endif; ?>
             </div>
+        </div>
         </div>
     </main>
 <?php  get_footer(); ?>

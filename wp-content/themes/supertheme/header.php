@@ -29,14 +29,14 @@
         }
         .card-containor{
             width: 100%;
-            height: 230px;
+            height: 220px;
             display: flex;
             margin-bottom: 40px;
                 box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
                 text-align: left;
         }
         .card-image {
-            position: relative;
+        position: relative;
         width: 250px;
         height: 100%;
         overflow: hidden;
@@ -93,6 +93,22 @@
 .card-image:hover .overlay {
   opacity: 0;
 }
+
+@media screen and (max-width: 801px) {
+    .card-image{
+        display:none;
+    }
+
+    .card-containor{
+            width: 100%;
+            height: auto}
+    
+    .right-content {
+        width: 100%;
+        }
+}
+
+        
     </style>
 </head>
 
