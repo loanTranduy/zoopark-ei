@@ -1,4 +1,60 @@
+<?php
+ 
+  //response generation function
+  $response = "";
+ 
+  //function to generate response
+  function my_contact_form_generate_response($type, $message){
+ 
+    global $response;
+ 
+    if($type == "success") $response = "<div class='success'>{$message}</div>";
+    else $response = "<div class='error'>{$message}</div>";
+  }
+
+    //response messages
+    $missing_content = "Attention! Vous n'avez pas renseigné toutes les informations.";
+    $email_invalid   = "Email Incorrect";
+    $message_unsent  = "Votre message n'a pas pu être envoyé! Réessayez";
+    $message_sent    = "Merci! Votre message a bien été envoyé.";
+    
+    //user posted variables
+    $name = $_POST['first_name'];
+    $lastname = $_POST['last_name'];
+    $email = $_POST['email'];
+    $date = $_POST['date'];
+    $message = $_POST['textarea1'];
+    $tel = $_POST['tel'];
+    
+    //php mailer variables
+    $to = get_option('admin_email');
+    $subject = "Quelqu'un vous a envoyé un message depuis ".get_bloginfo('name');
+    $headers = 'From: '. $email . "\r\n" .
+    'Reply-To: ' . $email . "\r\n";
+
+    //Validate the form :
+    if ($_POST['submitted']) {
+        //Validate the email
+        if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        my_contact_form_generate_response("error", $email_invalid);
+        }
+        else { //email is valid
+            //validate presence of name and message
+            if(empty($name) || empty($message) || empty($date)){
+                my_contact_form_generate_response("error", $missing_content);
+            }
+            else { //ready to go!
+                //send email
+                $sent = wp_mail($to, $subject, strip_tags($message), $headers);
+                if($sent) my_contact_form_generate_response("success", $message_sent); //message sent!
+                else my_contact_form_generate_response("error", $message_unsent); //message wasn't sent
+            }
+        }
+    }
+?>
+
 <?php get_header(); ?>
+
 <!--CONTACT-->
   <div class="ask section">
     <div class="container">
@@ -15,17 +71,43 @@
     </div>
   </div>
 
+  <!-- Success/error style -->
+  <style type="text/css">
+    .response {
+      margin-bottom : 30px;
+      padding: 8px 10px;
+      border-radius: 3px;
+      color : white;
+    }
+    .error{
+      background-color: #e57373;
+    }
+    .success{
+      background-color: #66BB6A;
+    }
+    .required {
+      color : #e57373;
+    }
+    .form-instructions {
+      font-size : .8rem;
+      color : #666
+    }
+  </style>
+
   <div class="container">
     <div class="row">
     <!--START FORM-->
     <div id="respond">
     <?php echo $response; ?>
+
+    <div class="form-instructions"><p>Champs obligatoires <span class="required">*</span></p></div>
+
       <form class="col s12" action="<?php the_permalink(); ?>" method="post">
         <div class="row">
 
         <!--PRENOM-->
           <div class="input-field col s6">
-            <input id="first_name" type="text" class="validate" name="first_name" value="<?php echo esc_attr($_POST['first_name']); ?>">
+            <input id="first_name" type="text" class="validate required" name="first_name" value="<?php echo esc_attr($_POST['first_name']); ?>">
             <label for="first_name">Prénom</label>
           </div>
 
@@ -46,7 +128,7 @@
           <!--DATE-->
           <div class="input-field col s6">
             <i class="material-icons grey-text">today</i>
-            <input type="date" class="datepicker">
+            <input type="date" class="datepicker" name="date" value="<?php echo esc_attr($_POST['date']); ?>">
           </div>
         </div>
 
@@ -59,16 +141,27 @@
         </div>
 
         <!--CHECK-->
-        <div class="row">
           <div class="input-field col s6">
-              <input type="checkbox" id="test5" />
-              <label for="test5">Je souhaite être contacter par téléphone</label>
+              <input type="checkbox" id="test5" name="telOn" 
+                <?php if(isset($_POST['telOn']) AND $_POST['telOn'] == "on") : ?>
+                  checked
+                <?php endif; ?>
+              />
+              <label for="test5">Je souhaite être contacté par téléphone</label>
           </div>
 
           <!--PHONE-->
-          <div class="input-field col s6">
+        <div class="input-field col s6">
             <i class="material-icons prefix">phone</i>
-            <input id="icon_telephone" disabled value="I am not editable" id="disabled" type="tel" class="validate">
+
+            <input id="icon_telephone" 
+              <?php if(isset($_POST['telOn']) AND $_POST['telOn'] == "on") : ?>
+                value="<?php echo esc_attr($_POST['tel']); ?>"
+              <?php else :?>
+                disabled value="Non autorisé"
+              <?php endif ?>
+             id="disabled" type="tel" name="tel" class="validate">
+
             <label for="icon_telephone">Téléphone</label>
           </div>
         </div>
@@ -76,14 +169,14 @@
         <!--BUTTON-->
         <div class="row center">
             <input type="hidden" name="submitted" value="1">
-            <input type="submit" style="background-color:orange;"class="btn-large waves-effect waves-light lighten-1">
+            <input type="submit" style="background-color:orange;" class="btn-large waves-effect waves-light lighten-1">
         </div>
       </form>
     </div>
   </div>
   </div>
-
   <!--FIN FORM-->
+
   <div class="company section">
     <div class="container">
       <div class="row">

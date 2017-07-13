@@ -75,6 +75,7 @@
         </div>
     </footer>
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="<?php bloginfo('template_url');?>/js/app.js"></script>
     <script src="<?php bloginfo('template_url');?>/js/materialize.js"></script>
     <script src="<?php bloginfo('template_url');?>/js/init.js"></script>
       <script>
