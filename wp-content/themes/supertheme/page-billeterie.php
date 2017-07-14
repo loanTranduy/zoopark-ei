@@ -15,7 +15,6 @@
         <div class="section">
             <div class="row">
                 <div class="col s12 center">
-                    <h3 class="orange-text">Achetez votre ZOOPASS et accéder à notre Parc toute l'année !</h3>
                     
                     <ul class="tabs">
                         <?php if(get_field('titre_1')): ?><li class="tab col s3"><a class="active" href="#prix1"><?php the_field('titre_1'); ?></a></li><?php endif;?>
@@ -30,7 +29,7 @@
                                         <div class="row">
                                         <!--La boucle des zoopass-->
                                             <div class="col s12 center">
-                                                <p>Achetez votre ZOOPASS et accéder à notre Parc toute l'année !</p>
+                                                <h3 class="orange-text">Achetez votre ZOOPASS et accéder à notre Parc toute l'année !</h3>
                                         <?php
                                                 $args = array(
                                                     'post_type' =>  'zoopass',
@@ -52,11 +51,18 @@
                                 </div>
                             <!--</div>-->
                 </div>
+
+                <!--ZONE PRIX 2-->
                 <div id="prix2" class="col s12">
-                    <?php if(get_field('contenu_2')): ?><p><?php the_field('contenu_2'); ?></p><?php endif;?>
-                </div>
-                <div id="prix3" class="col s12">
-                    <?php if(get_field('contenu_3')): ?><p><?php the_field('contenu_3'); ?></p><?php endif;?>
+                        <div class="container">
+                            <div class="section">
+                                <div class="row">
+                                    <div class="col s12 center">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                                                                   
                 </div>
 
             </div>
