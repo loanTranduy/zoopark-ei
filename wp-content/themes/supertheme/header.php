@@ -32,14 +32,15 @@
             height: 220px;
             display: flex;
             margin-bottom: 40px;
-                box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
-                text-align: left;
+            box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+            text-align: left;
         }
         .card-image {
         position: relative;
         width: 250px;
         height: 100%;
         overflow: hidden;
+        background-color: lightgrey;
 
         }
         .card-image a img {
@@ -93,6 +94,39 @@
 .card-image:hover .overlay {
   opacity: 0;
 }
+    .response {
+      margin-bottom : 30px;
+      padding: 8px 10px;
+      border-radius: 3px;
+      color : white;
+    }
+    .error{
+      background-color: rgba(248, 32, 102, 0.2);
+      border: 3px solid #F91F66;
+      padding: 1em;
+    }
+    .success{
+      background-color: rgba(98, 189, 103, 0.2);
+      border: 3px solid #66BB6A;
+      padding: 1em;
+      margin-bottom: 200px;
+    }
+    .required, .form-instructions {
+      color : #e57373;
+    }
+    .form-instructions {
+    font-size: 1rem;
+    margin-left: 0.8em;
+    }
+
+    .invisible{
+        display: none;
+    }
+    
+    .fixed{
+        z-index:9999;
+    }
+
 
 @media screen and (max-width: 801px) {
     .card-image{
@@ -116,18 +150,14 @@
     <!--Search-->
     <nav class="">
         <div class="search-bar nav-wrapper lighten-1 container">
-            <form>
-                <div class="input-field">
-                    <input id="search" type="search" required>
-                    <label for="search"><i class="material-icons">search</i></label><i class="material-icons">close</i></div>
-            </form>
+            <?php get_search_form(); ?>
         </div>
     </nav>
 
     <!--NAV-->
-    <nav class="white nav-princip" role="navigation">
+    <nav class="white nav-princip fixed" role="navigation">
         <div class="nav-wrapper container">
-            <a id="logo-container" href="<?php the_permalink(); ?>" class="brand-logo">
+            <a id="logo-container" href="<?php echo home_url(); ?>" class="brand-logo">
                 <h1 class="brand"><?php bloginfo('name'); ?>/<em><?php bloginfo('description'); ?></em></h1>
             </a>
             <ul class="right hide-on-med-and-down">

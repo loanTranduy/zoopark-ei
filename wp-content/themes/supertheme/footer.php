@@ -71,7 +71,7 @@
         </div>
 
         <div class="footer-copyright center grey darken-4">
-            <div class="container">ZooPark <a class="brown-text text-lighten-3" href="#">2016</a></div>
+            <div class="container">ZooPark <a class="brown-text text-lighten-3" href="<?php echo home_url(); ?>">2016</a></div>
         </div>
     </footer>
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>

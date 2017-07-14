@@ -46,8 +46,23 @@
         <div class="container">
             <div class="section">
                 <div class="row">
+                <!--La boucle des zoopass-->
                     <div class="col s12 center">
-                        <p>Achetez votre ZOOPASS et accéder à notre Parc toute l'année !</p><a href="#" id="download-button" class="call-btn btn-large waves-effect waves-light brown lighten-1">ZooPass<strong>1jours</strong><span>28€*</span></a> <a href="#" id="download-button" class="call-btn btn-large waves-effect waves-light brown lighten-1">ZooPass<strong>1ans</strong> <span>45€*</span></a>
+                        <p>Achetez votre ZOOPASS et accéder à notre Parc toute l'année !</p>
+                <?php
+                        $args = array(
+                            'post_type' =>  'zoopass',
+                            'post_status'   =>  'publish',
+                            'posts_per_page' =>  2
+                           );
+                    $requete = new WP_Query($args);
+                    if($requete->have_posts()):?>
+                    <?php while($requete->have_posts()): $requete->the_post(); ?>
+                    
+                        
+                        <a href="#" id="download-button" class="call-btn btn-large waves-effect waves-light brown lighten-1">ZooPass<strong><?php the_title(); ?></strong><span><?php the_field('prix-adulte'); ?></span></a> 
+                    <?php endwhile; ?>
+                <?php endif; wp_reset_postdata(); ?>
                         <p>*<small>Pass individuel</small></p>
                     </div>
                 </div>
@@ -58,7 +73,7 @@
     <!--Parallax 2-->
     <div class="parallax-container valign-wrapper">
         <div class="section no-pad-bot">
-            <div class="container">
+            <div class="container" id="horaire">
                 <!--Parallax 2 content-->
                 <?php if(get_field('parallax_2_titre')): ?>
                     <div class="row center">
@@ -69,7 +84,7 @@
         </div>
         <div class="parallax"><?php if(get_field('parallax_2')): ?><img src="<?php the_field('parallax_2'); ?>" alt="Unsplashed background img 2"><?php endif; ?></div>
     </div>
-    <div class="opening container" id="horaire">
+    <div class="opening container" >
         <div class="section">
             <div class="row">
                 <div class="col s12 center">
