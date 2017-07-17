@@ -1,0 +1,154 @@
+********************************************************************************
+* DUPLICATOR-LITE: INSTALL-LOG
+* VERSION: 1.2.10
+* STEP-1 START @ 06:43:24
+* NOTICE: Do NOT post this data to public sites or forums
+********************************************************************************
+PHP VERSION:	7.0.15 | SAPI: apache2handler
+PHP TIME LIMIT:	[0] time limit restriction disabled
+PHP MEMORY:	2048M | SUHOSIN: disabled
+SERVER:		Apache/2.2.31 (Unix) mod_wsgi/3.5 Python/2.7.13 PHP/7.0.15 mod_ssl/2.2.31 OpenSSL/1.0.2j DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.24.0
+DOC ROOT:	/Applications/MAMP/htdocs/zoopark
+DOC ROOT 755:	true
+LOG FILE 644:	true
+REQUEST URL:	http://localhost/zoopark/installer.php
+--------------------------------------
+ARCHIVE EXTRACTION
+--------------------------------------
+NAME:	20170714_zoopark_842840323cd9ca619613170714142959_archive.zip
+SIZE:	63.63MB
+ZIP:	Enabled (ZipArchive Support)
+
+>>> START EXTRACTION:
+ZipArchive Object
+(
+    [status] => 0
+    [statusSys] => 0
+    [numFiles] => 6621
+    [filename] => /Applications/MAMP/htdocs/zoopark/20170714_zoopark_842840323cd9ca619613170714142959_archive.zip
+    [comment] => 
+)
+File timestamp is 'Current' mode: 2017-07-17 06:43:26
+<<< EXTRACTION COMPLETE: true
+
+WEB SERVER CONFIGURATION FILE RESET:
+- Backup of .htaccess/web.config made to *.170717064326.orig
+- Reset of .htaccess/web.config files
+
+STEP-1 COMPLETE @ 06:43:26 - RUNTIME: 1.7876 sec.
+
+
+********************************************************************************
+* DUPLICATOR-LITE: INSTALL-LOG
+* STEP-2 START @ 06:44:01
+* NOTICE: Do NOT post to public sites or forums
+********************************************************************************
+--------------------------------------
+DATABASE ENVIRONMENT
+--------------------------------------
+MYSQL VERSION:	This Server: 5.6.35 -- Build Server: 5.6.35
+FILE SIZE:	database.sql (392.39KB) - installer-data.sql (392.39KB)
+TIMEOUT:	5000
+MAXPACK:	4194304
+SQLMODE:	NO_ENGINE_SUBSTITUTION
+NEW SQL FILE:	[/Applications/MAMP/htdocs/zoopark/installer-data.sql]
+--------------------------------------
+DATABASE RESULTS
+--------------------------------------
+ERRORS FOUND:	0
+TABLES DROPPED:	0
+QUERIES RAN:	1058
+
+i21_commentmeta: (0)
+i21_comments: (1)
+i21_duplicator_packages: (1)
+i21_links: (0)
+i21_options: (148)
+i21_postmeta: (704)
+i21_posts: (131)
+i21_term_relationships: (19)
+i21_term_taxonomy: (5)
+i21_termmeta: (0)
+i21_terms: (5)
+i21_usermeta: (28)
+i21_users: (1)
+
+Removed '26' cache/transient rows
+
+CREATE/INSTALL RUNTIME: 0.2918 sec.
+STEP-2 COMPLETE @ 06:44:02 - RUNTIME: 0.2977 sec.
+
+
+********************************************************************************
+* DUPLICATOR-LITE: INSTALL-LOG
+* STEP-3 START @ 06:44:10
+* NOTICE: Do NOT post to public sites or forums
+********************************************************************************
+CHARSET SERVER:	utf8
+CHARSET CLIENT:	utf8
+--------------------------------------
+SERIALIZER ENGINE
+[*] scan every column
+[~] scan only text columns
+[^] no searchable columns
+--------------------------------------
+i21_commentmeta^ (0)
+i21_comments~ (1)
+i21_duplicator_packages^ (0)
+i21_links^ (0)
+i21_options~ (120)
+i21_postmeta~ (704)
+i21_posts~ (131)
+i21_term_relationships~ (19)
+i21_term_taxonomy~ (5)
+i21_termmeta^ (0)
+i21_terms~ (5)
+i21_usermeta~ (28)
+i21_users~ (1)
+--------------------------------------
+Search1:	'http://localhost:8888/wordpress-zoopark' 
+Change1:	'http://localhost:8888/zoopark' 
+Search2:	'/Applications/MAMP/htdocs/wordpress-zoopark' 
+Change2:	'/Applications/MAMP/htdocs/zoopark' 
+Search3:	'http:\/\/localhost:8888\/wordpress-zoopark' 
+Change3:	'http:\/\/localhost:8888\/zoopark' 
+Search4:	'\/Applications\/MAMP\/htdocs\/wordpress-zoopark' 
+Change4:	'\/Applications\/MAMP\/htdocs\/zoopark' 
+Search5:	'%2FApplications%2FMAMP%2Fhtdocs%2Fwordpress-zoopark%2F' 
+Change5:	'%2FApplications%2FMAMP%2Fhtdocs%2Fzoopark%2F' 
+Search6:	'http%3A%2F%2Flocalhost%3A8888%2Fwordpress-zoopark' 
+Change6:	'http%3A%2F%2Flocalhost%3A8888%2Fzoopark' 
+Search7:	'\Applications\MAMP\htdocs\wordpress-zoopark' 
+Change7:	'/Applications/MAMP/htdocs/zoopark' 
+SCANNED:	Tables:13 	|	 Rows:1014 	|	 Cells:6553 
+UPDATED:	Tables:1 	|	 Rows:134 	|	 Cells:136 
+ERRORS:		0 
+RUNTIME:	0.095900 sec
+
+====================================
+CONFIGURATION FILE UPDATES:
+====================================
+
+UPDATED WP-CONFIG: /wp-config.php' (if present)
+
+WEB SERVER CONFIGURATION FILE BASIC SETUP:
+- Preparing .htaccess file with basic setup.
+Basic .htaccess file edit complete.  If using IIS web.config this process will need to be done manually.
+
+====================================
+GENERAL UPDATES & CLEANUP:
+====================================
+
+- Created directory wp-snapshots
+- Created file wp-snapshots/index.php
+
+====================================
+NOTICES
+====================================
+
+No Notices Found
+
+
+STEP 3 COMPLETE @ 06:44:10 - RUNTIME: 0.1055 sec.
+
+

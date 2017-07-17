@@ -11,7 +11,7 @@
                         <h2 class="header col s12 light"><?php the_field('parallax_1_titre'); ?></h2>
                     </div>
                 <?php endif; ?>
-                <div class="row center"><a href="<?php the_permalink(); ?>" id="download-button" class="btn-large waves-effect waves-light brown lighten-1"><?php the_field('button'); ?></a></div>
+                <div class="row center"><a href="https://killer-cepegra.xyz/skills5/zoopark/billeterie/" id="download-button" class="btn-large waves-effect waves-light brown lighten-1"><?php the_field('button'); ?></a></div>
             </div>
         </div>
         <div class="parallax"><?php if(get_field('parallax_1')): ?><img src="<?php the_field('parallax_1'); ?>" alt="Unsplashed background img 1"><?php endif; ?></div>
@@ -60,7 +60,7 @@
                     <?php while($requete->have_posts()): $requete->the_post(); ?>
                     
                         
-                        <a href="#" id="download-button" class="call-btn btn-large waves-effect waves-light brown lighten-1">ZooPass<strong><?php the_title(); ?></strong><span><?php the_field('prix-adulte'); ?></span></a> 
+                        <a href="https://killer-cepegra.xyz/skills5/zoopark/billeterie/" id="download-button" class="call-btn btn-large waves-effect waves-light brown lighten-1">ZooPass<strong><?php the_title(); ?></strong><span><?php the_field('prix-adulte'); ?></span></a> 
                     <?php endwhile; ?>
                 <?php endif; wp_reset_postdata(); ?>
                         <p>*<small>Pass individuel</small></p>
