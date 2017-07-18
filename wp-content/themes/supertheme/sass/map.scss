@@ -1,0 +1,52 @@
+/* MAP */
+#mapCont {
+  position : relative;
+}
+
+#mapCont img {
+  position : relative;
+  display : block;
+  width : 100%;
+  height : auto;
+}
+
+#pointer {
+  position : absolute;
+  transform : translate(-50%, -50%);
+  z-index : 2;
+  width : 5%; height : 5%;
+  background : url('../content/images/map_pointer.svg') no-repeat;
+  background-size : contain;
+}
+
+/* Animaux */
+.animal-icon {
+  position : absolute;
+  z-index : 1;
+  width : 5%;
+}
+
+.animal-icon img {
+  filter : grayscale(80%);
+  transition : filter 1s;
+}
+
+.animal-icon.active {
+  display : block;
+  animation : pulse 1.4s infinite
+}
+
+.animal-icon.active:after {
+  content : '';
+  display : block;
+  position : absolute;
+  top : -5%; left : -5%;
+  width : 110%; height : 110%;
+  border : 5px solid white;
+  border-radius : 50%;
+  animation : halo 1.4s infinite;
+}
+
+.animal-icon.active img {
+  filter : grayscale(0%);
+}

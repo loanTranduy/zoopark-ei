@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="<?php bloginfo('template_url');?>/css/styles.min.css" type="text/css" rel="stylesheet" media="screen,projection">
     <link  type="text/css" rel="stylesheet" media="screen,projection" href="<?php bloginfo('template_url');?>/css/billeterie.css">
+    <link  type="text/css" rel="stylesheet" media="screen,projection" href="<?php bloginfo('template_url');?>/css/map.css">
     <?php
         $custom_logo_id = get_theme_mod( 'custom_logo' );
         $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );

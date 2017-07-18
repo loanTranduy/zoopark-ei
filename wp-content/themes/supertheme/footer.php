@@ -79,9 +79,14 @@
     <script src="<?php bloginfo('template_url');?>/js/materialize.js"></script>
     <script src="<?php bloginfo('template_url');?>/js/init.js"></script>
       <script>
+    //   contact
     $('.datepicker').pickadate({
       selectMonths: true, // Creates a dropdown to control month
       selectYears: 15 // Creates a dropdown of 15 years to control year
+    });
+    // MAP
+    $(document).ready(function() {
+        $('select').material_select();
     });
   </script>
 </body>
