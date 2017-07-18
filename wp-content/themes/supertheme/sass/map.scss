@@ -14,7 +14,24 @@
     background-color: orangered;
     border-radius: 15px;
     border: 2px solid white;
-    transform:translate(-50%, -50%)
+    transform:translate(-50%, -50%);
+        animation-name: pulse;
+    animation-duration: .8s; 
+    animation-timing-function: ease-out; 
+    animation-delay: 0;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+
+  }
+}
+
+  @keyframes pulse {
+  0% {
+    transform: scale(.8);
+  }
+
+  100% {
+    transform: scale(1);
 
   }
 }
