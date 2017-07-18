@@ -26,14 +26,14 @@
 
                 <!--JOURS-->
                 <div id="prix1" class="col s12 orange">
-                    <div class="section" style="padding:60px 0;margin: 0 10%;display:flex; justify-content:center">
+                    <div class="section">
                             <!--ENFANTS-->
                             <?php if(get_field('enfants_1')): ?><div class="center stamp">
                                 <div class="ticket">
                                     <h4 class="enfant">Tickets enfants</h4>
                                     <p><?php the_field('infos_1'); ?></p>
                                     <p class="prix enfant"><?php the_field('enfants_1'); ?><span>€</span></p>
-                                    <a href="#" class="conditions" style="display:flex; justify-content:center">
+                                    <a href="#" class="conditions" >
                                         <i class="material-icons grey-text" style="font-size: 1.2em; line-height: 3.4em; padding-right: 0.3em;">info_outline</i>
                                         <p class="grey-text" >conditions</p>
                                     </a>
@@ -47,7 +47,7 @@
                                     <h4 class="adulte">Tickets adultes</h4>
                                     <p><?php the_field('infos_1'); ?></p>
                                     <p class="prix adulte"><?php the_field('adulte_1'); ?><span>€</span></p>
-                                    <a href="#" class="conditions" style="display:flex; justify-content:center">
+                                    <a href="#" class="conditions" >
                                         <i class="material-icons grey-text" style="font-size: 1.2em; line-height: 3.4em; padding-right: 0.3em;">info_outline</i>
                                         <p class="grey-text" >conditions</p>
                                     </a>
@@ -61,7 +61,7 @@
                                     <h4 class="senior">Tickets seniors</h4>
                                     <p><?php the_field('infos_1'); ?></p>
                                     <p class="prix senior"><?php the_field('seniors_1'); ?><span>€</span></p>
-                                    <a href="#" class="conditions" style="display:flex; justify-content:center">
+                                    <a href="#" class="conditions" >
                                         <i class="material-icons grey-text" style="font-size: 1.2em; line-height: 3.4em; padding-right: 0.3em;">info_outline</i>
                                         <p class="grey-text" >conditions</p>
                                     </a>
@@ -82,7 +82,7 @@
                                     <h4 class="enfant">Zoopass enfants</h4>
                                     <p><?php the_field('infos_2'); ?></p>
                                     <p class="prix enfant"><?php the_field('enfants_2'); ?><span>€</span></p>
-                                    <a href="#" class="conditions" style="display:flex; justify-content:center">
+                                    <a href="#" class="conditions" >
                                         <i class="material-icons grey-text" style="font-size: 1.2em; line-height: 3.4em; padding-right: 0.3em;">info_outline</i>
                                         <p class="grey-text" >conditions</p>
                                     </a>
@@ -96,7 +96,7 @@
                                     <h4 class="adulte">Zoopass adultes</h4>
                                     <p><?php the_field('infos_2'); ?></p>
                                     <p class="prix adulte"><?php the_field('adultes_2'); ?><span>€</span></p>
-                                    <a href="#" class="conditions" style="display:flex; justify-content:center">
+                                    <a href="#" class="conditions" >
                                         <i class="material-icons grey-text" style="font-size: 1.2em; line-height: 3.4em; padding-right: 0.3em;">info_outline</i>
                                         <p class="grey-text" >conditions</p>
                                     </a>
@@ -110,7 +110,7 @@
                                     <h4 class="senior">Zoopass seniors</h4>
                                     <p><?php the_field('infos_2'); ?></p>
                                     <p class="prix senior"><?php the_field('seniors_2'); ?><span>€</span></p>
-                                    <a href="#" class="conditions" style="display:flex; justify-content:center">
+                                    <a href="#" class="conditions" >
                                         <i class="material-icons grey-text" style="font-size: 1.2em; line-height: 3.4em; padding-right: 0.3em;">info_outline</i>
                                         <p class="grey-text" >conditions</p>
                                     </a>

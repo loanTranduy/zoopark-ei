@@ -26,10 +26,10 @@
 .enfant {
   color: #0099ff; }
 
-.adulte {
+.senior {
   color: #009933; }
 
-.senior {
+.adulte {
   color: #ff5c33; }
 
 .linkk {
@@ -135,6 +135,26 @@
 .fixed {
   z-index: 9999; }
 
+#prix1 .section, #prix2 .section {
+  padding: 60px 0;
+  margin: 0 10%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row; }
+  #prix1 .section .conditions, #prix2 .section .conditions {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+
 @media screen and (max-width: 801px) {
   .card-image {
     display: none; }
@@ -143,3 +163,14 @@
     height: auto; }
   .right-content {
     width: 100%; } }
+
+@media screen and (max-width: 900px) {
+  #prix1 .section, #prix2 .section {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    #prix1 .section .center, #prix2 .section .center {
+      margin-bottom: 30px; } }
