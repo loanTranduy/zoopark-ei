@@ -53,9 +53,9 @@
 //Variables globales
 var theLatitude = 50.47094456845385;
 var theLongitude = 4.468710422515869;
-var latMax = 50.478552;
+var latMax = 50.478000;
 var latMin = 50.467847;
-var longMax = 4.489707;
+var longMax = 4.483807;
 var longMin = 4.461093;
 
 
@@ -75,7 +75,7 @@ function successGeo(pos) {
   posLong = crd.longitude;
   posLat = crd.latitude;
 
-  //Si la géolocalisation n'est pas assez précise
+  //Préciser Géo
   if (posLat > latMax || posLat < latMin || posLong > longMax || posLong < longMin) {
     CalculCoordo(theLongitude, theLatitude, $('#pointer'));
   }
@@ -84,11 +84,11 @@ function successGeo(pos) {
   }
 }
 
-function errorGeo(err) {
-  console.log(err);
+function errorGeo(e) {
+  console.log(e);
 }
 
-function AnimalsCoordo() {
+function animaux() {
   $('.animal-icon').each(function(){
     long = $(this).attr('data-long');
     lat = $(this).attr('data-lat');
@@ -96,7 +96,7 @@ function AnimalsCoordo() {
   })
 }
 
-function CalculCoordo (long, lat, el){ 
+function CalculCoordo (long, lat, el){
   ratio_long = longMax - longMin;
   posLong =  ((long - longMin)/ratio_long)*100 + "%";
   ratio_lat = latMax - latMin;
@@ -105,15 +105,15 @@ function CalculCoordo (long, lat, el){
 }
 
 Geolocalisation();
-AnimalsCoordo();
+animaux();
 
 /******************************************************************************/
-//ICON-MAP
-$('#select-icons').on('change', function(){
-  selectVal = $(this).val();
+//Animal
+$('#liste').on('change', function(){
+  Val = $(this).val();
 
   $(".animal-icon").each(function(){
-    if($(this).attr("data-animal") == selectVal) {
+    if($(this).attr("data-animal") == Val) {
       $(this).addClass("active");
     }
     else {
@@ -122,11 +122,6 @@ $('#select-icons').on('change', function(){
   })
 
 })
-
-
-  });
-})(jQuery);
-    
 
 
     
