@@ -4,6 +4,7 @@
 
   img {
     position : relative;
+    display: block;
   }
 
   #pointer {
@@ -13,6 +14,7 @@
     background-color: orangered;
     border-radius: 15px;
     border: 2px solid white;
+    transform:translate(-50%, -50%)
 
   }
 }
@@ -22,11 +24,35 @@
     position : absolute;
     z-index : 1;
     width : 4%;
-    display:none;
   }
 
-      .animal-icon.active {
-    display : block;
+
+.animal-icon.active {
+    animation-name: stretch;
+    animation-duration: .8s; 
+    animation-timing-function: ease-out; 
+    animation-delay: 0;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
 }
 
+@keyframes stretch {
+  0% {
+    transform: scale(.8);
+  }
+
+  100% {
+    transform: scale(1.2);
+
+  }
+}
+
+@media screen and (max-width: 801px) {
+  #mapIn {
+  #pointer {
+    width :8px; height : 8px;
+    border: 1px solid white;
+
+  }
+}}
 

@@ -2,7 +2,8 @@
 #mapIn {
   position: relative; }
   #mapIn img {
-    position: relative; }
+    position: relative;
+    display: block; }
   #mapIn #pointer {
     position: absolute;
     z-index: 9999;
@@ -10,14 +11,49 @@
     height: 15px;
     background-color: orangered;
     border-radius: 15px;
-    border: 2px solid white; }
+    border: 2px solid white;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
 
 /* Animaux map*/
 .animal-icon {
   position: absolute;
   z-index: 1;
-  width: 4%;
-  display: none; }
+  width: 4%; }
 
 .animal-icon.active {
-  display: block; }
+  -webkit-animation-name: stretch;
+  animation-name: stretch;
+  -webkit-animation-duration: .8s;
+  animation-duration: .8s;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  -webkit-animation-delay: 0;
+  animation-delay: 0;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite; }
+
+@-webkit-keyframes stretch {
+  0% {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8); }
+  100% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2); } }
+
+@keyframes stretch {
+  0% {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8); }
+  100% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2); } }
+
+@media screen and (max-width: 801px) {
+  #mapIn #pointer {
+    width: 8px;
+    height: 8px;
+    border: 1px solid white; } }

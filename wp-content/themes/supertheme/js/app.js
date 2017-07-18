@@ -53,9 +53,9 @@
 //Variables globales
 var theLatitude = 50.47094456845385;
 var theLongitude = 4.468710422515869;
-var latMax = 50.478000;
+var latMax = 50.4788000;
 var latMin = 50.467847;
-var longMax = 4.483807;
+var longMax = 4.483307;
 var longMin = 4.461093;
 
 
@@ -65,7 +65,7 @@ function Geolocalisation() {
     timeout: 12000, //Durée avant affichage d'erreur
     maximumAge: 600 //Durée de mise en cache de la position
   }
-  navigator.geolocation.getCurrentPosition(successGeo, errorGeo, optionsGeo);
+  navigator.geolocation.watchPosition(successGeo, errorGeo, optionsGeo);
 }
 
 function successGeo(pos) {
